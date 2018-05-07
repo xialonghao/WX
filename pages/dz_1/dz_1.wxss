@@ -1,0 +1,129 @@
+/* pages/test/test.wxss */
+.wrap {
+  width: 550rpx;
+  height: 550rpx;
+  margin: 0 auto; 
+  border: 1px solid #BABABA;
+  background: #EEEDF2;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: relative;
+  margin-top:70rpx; 
+}
+.white-circle {
+  width: 410rpx;
+  height: 410rpx;
+  margin: 0 auto;
+  border: 1px solid #BABABA;
+  border-radius: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.main-text {
+  width: 230rpx;
+  height: 230rpx;
+  margin: 0 auto;
+  border: 4px solid #E7EAE6;
+  border-radius: 100%;
+  background: #7A859B;
+  display: flex;
+  align-items: center;
+
+  left: 150rpx;
+  z-index: 100;
+  color: #fff;
+  animation: main-text-move 2s linear infinite;
+}
+.bi {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+}
+.bi>view:nth-child(1) {
+  display: flex;
+  position: absolute;
+  top: 210rpx;
+  right : -95rpx;
+  transform: rotate(0deg);
+}
+.bi>view:nth-child(2) {
+  display: flex;
+  position: absolute;
+  bottom:-25rpx;
+  right:30rpx;
+  transform: rotate(60deg);
+}
+.bi>view:nth-child(3) {
+  display: flex;
+  position: absolute;
+  bottom:-25rpx;
+  left:30rpx;
+  transform: rotate(120deg);
+}
+.bi>view:nth-child(4) {
+  display: flex;
+  position: absolute;
+  top:210rpx;
+  left:-95rpx;
+  transform: rotate(180deg);
+}
+.bi>view:nth-child(5) {
+  display: flex;
+  position: absolute;
+  top:-25rpx;
+  left:30rpx;
+  transform: rotate(240deg);
+}
+.bi>view:nth-child(6) {
+  display: flex;
+  position: absolute;
+  top:-25rpx;
+  right:30rpx;
+  transform: rotate(300deg);
+}
+.wire { 
+  border-top:2px dashed #658C0F;
+  width:60rpx;
+  position: relative;
+  margin-top : 65rpx;
+}
+.jiantou {
+  width:25rpx;
+  height:20rpx;
+  position: absolute;
+  left: -28rpx;
+  top:-10rpx;
+}
+.item-text {
+  width:140rpx;
+  height: 140rpx; 
+  border-radius: 100%;
+  background: #6A8A0F;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  font-weight: bold;
+  animation: item-move 1.1s linear infinite; 
+}
+@keyframes item-move {
+  0%{margin: 0}
+  50%{margin-right: 10rpx}
+  100%{margin: 0}
+}
+
+ @keyframes main-text-move {
+  0%{background: #7A859B}
+  50%{background: #3B3E43}
+  100%{background: #7A859B}
+} 
+
+.bi>view:nth-child(odd) .item-text{
+  background: #E96B00;
+}

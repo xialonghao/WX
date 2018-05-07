@@ -1,0 +1,29 @@
+<!--pages/dz_16/dz_16.wxml-->
+<view class="container">
+    <view class="qingjia-view">
+        <text>出行方式：</text>
+            <picker bindchange="bindTypeChange" disabled='{{subbtn}}' value="{{typeindex}}" range="{{typearray}}">
+           <input class="date-input" value='{{typearray[typeindex]}}' disabled="true" />
+        </picker> 
+    </view>
+
+     <view class="qingjia-view">
+        <text>回家时间：</text>
+            <picker bindchange="bindTimeChange" disabled='{{subbtn}}' value="{{timeindex}}" range="{{timearray}}">
+           <input class="date-input" value='{{timearray[timeindex]}}' disabled="true" />
+        </picker> 
+    </view> 
+
+     <view class='warning-text'>
+      <text wx:if="{{role == 'teacher'}}">老师啥时候改都行，尽情改。</text>
+      <text wx:else>只能在周三或周四提交/撤销，路上请注意安全 :)</text>
+    </view> 
+    <button class='sub' bindtap='sub' disabled='{{subbtn}}'>提交</button>
+    <view class='hr'></view>
+     <button class='rev' bindtap='backout' plain="true" disabled='{{revbtn}}'>撤销申请</button>
+
+     <view class='record' bindtap='record' wx:if="{{role != 'teacher'}}">
+        <view>我的申请记录</view>
+     </view> 
+</view>
+
